@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    String str = sc.nextLine();
+	    
+	    String[] temp = str.split(" ");
+	    
+	    String bigword = temp[0];
+	    int bigword_l = bigword.length();
+	    
+	    for(int i = 1; i < temp.length; i++){
+	       String word = temp[i];
+	       int word_l = word.length();
+	       if(word_l > bigword_l){
+	           bigword = word;
+	           bigword_l = word_l;
+	       }
+	       
+	    }
+	    
+	    System.out.print(bigword);
+	}
+}
